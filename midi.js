@@ -31,10 +31,12 @@ navigator.requestMIDIAccess().then(onMIDISuccess, onMIDIFailure);
 function onMIDISuccess(midiAccess) {
   const input = midiAccess.inputs.values().next().value;
   input.onmidimessage = onMIDIMessage;
+  document.getElementById("midi-message").innerText = "MIDI connected";
 }
 
 function onMIDIFailure() {
   console.error("Failed to access MIDI devices");
+  document.getElementById("midi-message").innerText = "MIDI not available";
 }
 
 function setRegisteredNotesCookie() {
@@ -52,7 +54,7 @@ function loadRegisteredNotesCookie() {
     const notesArray = JSON.parse(notesJson);
     registeredNotes = new Set(notesArray);
     const notes = Array.from(registeredNotes)
-      .sort()
+      .sort((a, b) => a - b)
       .map((note) => midiToNoteName(note))
       .join(" ");
     document.getElementById("registeredNotes").innerHTML = notes;
