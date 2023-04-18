@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MIDI-Notes</title>
+    <link rel="stylesheet" href="piano.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>MIDI Note Display</h1>
+    <div id="noteDisplay"></div>
+    <div class="piano">
+      <div class="key white" data-note="60"></div>
+      <div class="key black" data-note="61"></div>
+      <div class="key white" data-note="62"></div>
+      <div class="key black" data-note="63"></div>
+      <div class="key white" data-note="64"></div>
+      <div class="key white" data-note="65"></div>
+      <div class="key black" data-note="66"></div>
+      <div class="key white" data-note="67"></div>
+      <div class="key black" data-note="68"></div>
+      <div class="key white" data-note="69"></div>
+      <div class="key black" data-note="70"></div>
+      <div class="key white" data-note="71"></div>
+    </div>
+
+    <div class="m-5">
+      <button id="registerButton">Start Registration</button>
+      <button id="clearRegisterButton">Clear</button>
+    </div>
+    <div class="m-5">
+      <label>
+        <input type="checkbox" id="myCheckbox" checked>
+        Beep on non-registered note
+      </label>
+    </div>
+    <div class="m-5">
+      <ul id="registeredNotes"></ul>
+    </div>
+    <script src="midi.js"></script>
+  </body>
+</html>

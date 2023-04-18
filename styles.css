@@ -1,0 +1,30 @@
+button {
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2196f3;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #0c7cd5;
+}
+
+button:active {
+  background-color: #0c7cd5;
+  transform: translateY(2px);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.m-5 {
+  margin: 5px;
+}
